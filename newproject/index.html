@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery显示圆形统计插件circliful</title>
+	<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.circliful.min.js"></script>
+	<style>
+		
+		.circle-info{
+			    background: #d9cbdc none repeat scroll 0 0;
+			    border-radius: 5px;
+			    left: 55px;
+			    margin: 0 auto;
+			    padding: 10px;
+			    text-align: center;
+			    top: 120px;
+			    width: 70px;
+			    line-height: 20px !important;
+			    cursor: pointer;
+		}
+		.circle-text{
+			font-size: 28px;
+            letter-spacing: 10px;
+            line-height: 180px!important;			
+		}
+	</style>
+</head>
+<body>
+<center>
+<div id="myStathalf" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-fill="#ddd"></div>
+<div id="myStat" data-dimension="200" data-text="良好" data-info="健康详情" data-width="10" data-fontsize="24" data-percent="75" data-fgcolor="#F7B046" data-bgcolor="#eee" data-fill="#ddd" data-total="10"data-part="50"></div>
+<div id="myStathalf2" data-dimension="250" data-text="35" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-icon="fa-task"></div>
+<div id="myStat2" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-type="half"></div>
+</center>
+<!--参数详解：
+参数	描述	默认值
+data-dimension	圆形图的宽度和高度px	250
+data-text	显示在圆圈内侧的文字内容	empty
+data-info	显示在data-text下的说明信息	empty
+data-width	圆圈的厚度px	15
+data-fontsize	圈内文字大小px	15
+data-percent	圆圈统计百分比%，1-100	50
+data-fgcolor	圆圈的前景色	#556b2f
+data-bgcolor	圆圈的背景色	#eeeeee
+data-fill	圆形的填充背景色	empty
+data-type	圆形统计类型，可以是”half”或”full”	full
+data-total	数据总量，和data-part配合使用	empty
+data-part	数据量，与data-total配合使用	empty
+data-border	圆形样式，可以加边框，如inline或outline	empty
+data-icon	Fontawesome图标样式，详情可参照：Fontawesome Website – Icons	empty
+data-icon-size	图标大小	empty
+data-icon-color	图标颜色-->
+
+<script>
+$(function(){
+	$('#myStathalf').circliful();
+	$('#myStat').circliful();
+	$('#myStathalf2').circliful();
+	$('#myStat2').circliful();
+});
+</script>
+</body>
+</html>
